@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //121=121 === palindrom no
+        let no=121 //258
+        //8 5 2
+        let rev=0
+        let f=no
+        do{
+            let r=no%10
+            rev= (rev*10)+r
+            no=Math.floor(no/10)
+        }while(no>0)
+
+        document.write('<br>Reverse no is '+rev)
+        if(f==rev){
+            document.write('<br>It is palindrom no')
+        }else{
+            document.write('<br>It is not palindrom no')
+        }
+    </script>
+</body>
+</html>

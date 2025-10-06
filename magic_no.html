@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //magic no
+        let no = 1729
+        let sum = 0
+        let rev = 0
+        let n = no
+        // while(no>0){
+        //     let r = no%10 
+        //     no=Math.floor(no/10)
+        //     sum=sum+r
+        // }
+        do {
+            let r = no % 10
+            no = Math.floor(no / 10)
+            sum = sum + r
+        } while (no > 0)
+        document.write('<br>sum is ' + sum)
+        let f = sum
+        do {
+            let r = sum % 10
+            rev = (rev * 10) + r //0*10+2 =2 
+            sum = Math.floor(sum / 10)
+        } while (sum > 0)
+        // while (sum > 0) {
+        //     let r = sum % 10
+        //     rev = (rev * 10) + r //0*10+2 =2 
+        //     sum = Math.floor(sum / 10)
+        // }
+        document.write('<br>reverse is ' + rev)
+        let m = rev * f
+        document.write('<br>Multiply is ' + m)
+        if (m == n) {
+            document.write('<br>It is Magical no')
+        } else {
+            document.write('<br>It is not magical no')
+        }
+    </script>
+</body>
+
+</html>
